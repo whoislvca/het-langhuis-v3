@@ -1,0 +1,321 @@
+:root {
+    --rose-color-programma: #FF006E;
+    --amber-color-archief: #FFCC00;
+    --orange-color-planjebezoek: #FB5607;
+    --blueviolet-color-kunstenaar: #8338EC;
+    --azzure-color-nieuws: #3A86FF;
+    --lightgreen-color-over: #008040;
+    --background-color: #ffffff;
+    --h1-fontSize: 21.53rem;
+    --h2-fontSize: 13.307rem;
+    --h3-fontSize: 8.224rem;
+    --h4-fontSize: 5.083rem;
+    --h5-fontSize: 3.142rem;
+    --h6-fontSize: 1.942rem;
+    --p-fontSize: 1.2rem;
+    --lightWeight: 400;
+    --boldWeight: 800;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    background-color: var(--background-color);
+
+    scrollbar-width: none;
+
+    -webkit-animation: fadeInAnimation ease 1s;
+    animation: fadeInAnimation ease 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: auto;
+}
+
+@-webkit-keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #000000;
+}
+
+::selection {
+    color: #fff;
+    background-color: #000000;
+}
+
+/* Nav */
+.nav-item {
+    margin: 27.5px 20px 0 20px;
+    padding: 0;
+}
+
+.nav-text {
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    color: #d3d3d3;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-right: 20px;
+    transition: ease-in 0.5s;
+}
+
+.nav-text:last-child {
+    padding-right: 0;
+}
+
+.nav-text:hover:nth-child(1) {
+    color: var(--rose-color-programma);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(2) {
+    color: var(--amber-color-archief);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(3) {
+    color: var(--orange-color-planjebezoek);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(4) {
+    color: var(--blueviolet-color-kunstenaar);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(5) {
+    color: var(--azzure-color-nieuws);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(6) {
+    color: var(--lightgreen-color-over);
+    transition: ease-in 0.5s;
+}
+
+/* logo */
+.logo-container {
+    position: absolute;
+    width: 100svw;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo {
+    width: calc(100svw - 4rem);
+    margin: 12.5px 20px;
+    padding: 0;
+    z-index: -5;
+}
+
+.nav-logo {
+    position: absolute;
+    top: 0;
+    margin: 2.5rem 0 0 5rem;
+    padding: 0;
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* menu */
+.overlay {
+    position: fixed;
+    height: 0;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-y: hidden;
+    transition: ease-in-out 0.5s;
+}
+
+.overlay-content {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay-content a {
+    margin: 0;
+    padding: 15px 0 0 0;
+    text-decoration: none;
+    font-size: var(--h3-fontSize);
+    text-transform: uppercase;
+    color: var(--background-color);
+    display: block;
+    transition: ease-in-out 0.3s;
+}
+
+.openbtn {
+    position: absolute;
+    width: calc(100svw - 4rem);
+    text-align: right;
+    top: 0;
+    margin: 2.5rem 2rem 2rem 2rem;
+    padding: 0;
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: black;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* Year */
+.archief-year-container {
+    margin: 10rem 1rem 2.5rem 1rem;
+    width: calc(100svw - 2rem);
+}
+
+.year {
+    font-size: var(--h4-fontSize);
+    margin: 0;
+    padding: 0;
+}
+
+/* archief */
+.nieuws-container {
+    display: grid;
+    gap: 5rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20rem 1rem 5rem 1rem;
+}
+
+.grid-archief-item {
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #d3d3d3;
+    color: #d3d3d3;
+    filter: grayscale(100);
+    transition: ease-in-out 0.2s;
+}
+
+.grid-archief-item:hover {
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid var(--azzure-color-nieuws);
+    color: var(--azzure-color-nieuws);
+    filter: grayscale(0);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.grid-archief-item img {
+    width: 100%;
+}
+
+.archief-date {
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    margin: 0.5rem 0;
+}
+
+
+.archief-caption {
+    font-size: var(--h6-fontSize);
+    margin: 0.5rem 0;
+}
+
+/* footer */
+.footer-container {
+    width: 100svw;
+    border-top: 2px solid var(--azzure-color-nieuws);
+}
+
+.footer-logo {
+    width: 100svw;
+    padding: 10rem 0 10rem 0;
+}
+
+.footer-grid-container {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100svw;
+    border-top: 2px solid var(--azzure-color-nieuws);
+}
+
+.footer-item {
+    margin: 0;
+    padding: 2rem;
+    border-right: 2px solid var(--azzure-color-nieuws);
+}
+
+.footer-item:last-child {
+    margin: 1rem 0 1rem 1rem;
+    padding: 1rem 0;
+    border-right: none;
+}
+
+.footer-text {
+    font-size: var(--h6-fontSize);
+    font-weight: var(--lightWeight);
+    color: #000000;
+}
+
+.footer-text a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    color: var(--azzure-color-nieuws);
+}

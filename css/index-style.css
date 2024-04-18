@@ -1,0 +1,80 @@
+:root {
+    --amber-color-nutezien: #FFBE0B;
+    --orange-color-planjebezoek: #FB5607;
+    --rose-color-programma: #FF006E;
+    --blueviolet-color-kunstenaar: #8338EC;
+    --azzure-color-nieuws: #3A86FF;
+    --lightgreen-color-over: #85FF9E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    overflow: hidden;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    color: #fff;
+    background-color: #d3d3d3;
+}
+
+/* image hero */
+.hero-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.hero-image {
+    object-fit: contain;
+    width: 100svw;
+    height: 100svh;
+    margin: 0;
+    padding: 0;
+}
+
+/* video */
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+video {
+    position: fixed;
+    width: calc(100vw - 20px);
+    height: 75svh;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    z-index: 0;
+}

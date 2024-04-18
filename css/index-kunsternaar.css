@@ -1,0 +1,484 @@
+:root {
+    --rose-color-programma: #FF006E;
+    --amber-color-archief: #FFCC00;
+    --orange-color-planjebezoek: #FB5607;
+    --blueviolet-color-kunstenaar: #8338EC;
+    --azzure-color-nieuws: #3A86FF;
+    --lightgreen-color-over: #008040;
+    --background-color: #ffffff;
+    --h1-fontSize: 21.53rem;
+    --h2-fontSize: 13.307rem;
+    --h3-fontSize: 8.224rem;
+    --h4-fontSize: 5.083rem;
+    --h5-fontSize: 3.142rem;
+    --h6-fontSize: 1.942rem;
+    --p-fontSize: 1.2rem;
+    --lightWeight: 400;
+    --boldWeight: 800;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    background-color: var(--background-color);
+
+    scrollbar-width: none;
+
+    -webkit-animation: fadeInAnimation ease 1s;
+    animation: fadeInAnimation ease 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: auto;
+}
+
+@-webkit-keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #000000;
+}
+
+::selection {
+    color: #fff;
+    background-color: #000000;
+}
+
+/* Nav */
+.nav-item {
+    margin: 27.5px 20px 0 20px;
+    padding: 0;
+}
+
+.nav-text {
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    color: #d3d3d3;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-right: 20px;
+    transition: ease-in 0.5s;
+}
+
+.nav-text:last-child {
+    padding-right: 0;
+}
+
+.nav-text:hover:nth-child(1) {
+    color: var(--rose-color-programma);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(2) {
+    color: var(--amber-color-archief);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(3) {
+    color: var(--orange-color-planjebezoek);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(4) {
+    color: var(--blueviolet-color-kunstenaar);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(5) {
+    color: var(--azzure-color-nieuws);
+    transition: ease-in 0.5s;
+}
+
+.nav-text:hover:nth-child(6) {
+    color: var(--lightgreen-color-over);
+    transition: ease-in 0.5s;
+}
+
+/* logo */
+.logo-container {
+    position: absolute;
+    width: 100svw;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo {
+    width: calc(100svw - 4rem);
+    margin: 12.5px 20px;
+    padding: 0;
+    z-index: -5;
+}
+
+.nav-logo {
+    position: absolute;
+    top: 0;
+    margin: 2.5rem 0 0 5rem;
+    padding: 0;
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* menu */
+.overlay {
+    position: fixed;
+    height: 0;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-y: hidden;
+    transition: ease-in-out 0.5s;
+}
+
+.overlay-content {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay-content a {
+    margin: 0;
+    padding: 15px 0 0 0;
+    text-decoration: none;
+    font-size: var(--h3-fontSize);
+    text-transform: uppercase;
+    color: var(--background-color);
+    display: block;
+    transition: ease-in-out 0.3s;
+}
+
+.openbtn {
+    position: absolute;
+    width: calc(100svw - 4rem);
+    text-align: right;
+    top: 0;
+    margin: 2.5rem 2rem 2rem 2rem;
+    padding: 0;
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: black;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* border */
+.border {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50svw;
+    border-right: 2px solid var(--blueviolet-color-kunstenaar);
+    z-index: -5;
+}
+
+/* kunstenaar all */
+.preview {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.container-kunstenaar {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.container-kunstenaar .col {
+    width: 50%;
+    height: 100%;
+}
+
+.container-kunstenaar .img-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container-kunstenaar .img-preview .img-preview-container {
+    width: auto;
+    height: 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.container-kunstenaar .img-names {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.container-kunstenaar .img-names .img-name {
+    position: relative;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    cursor: pointer;
+}
+
+.container-kunstenaar .img-names .img-name .name {
+    position: relative;
+    top: 0;
+    font-size: var(--h4-fontSize);
+    font-weight: var(--boldWeight);
+    text-transform: capitalize;
+}
+
+.img-name a {
+    text-decoration: none;
+    transition: ease-in-out 0.2s;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    width: 50vw;
+    color: #d3d3d3;
+}
+
+.grid:hover {
+    color: var(--blueviolet-color-kunstenaar);
+    transition: ease-in-out 0.2s;
+}
+
+/* kunstenaar close up */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    width: 100svw;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* exhibition information */
+.exhibition-information-container {
+    display: grid;
+    justify-content: center;
+    margin: 0 0 5rem 0;
+    padding: 0;
+}
+
+.exhibition-titel {
+    font-size: var(--h2-fontSize);
+    font-weight: var(--boldWeight);
+    line-height: var(--h2-fontSize);
+    text-transform: uppercase;
+    text-align: center;
+    color: #000000;
+}
+
+.exhibition-information-alinea {
+    font-size: var(--h6-fontSize);
+    font-weight: var(--boldWeight);
+    text-wrap: pretty;
+    text-align: left;
+    margin: 1rem 0;
+    padding: 0;
+    max-width: 600px;
+}
+
+.exhibition-information-informatie {
+    font-size: var(--h6-fontSize);
+    text-wrap: pretty;
+    text-align: left;
+    margin: 1rem 0;
+    padding: 0;
+    max-width: 600px;
+}
+
+.exhibition-information-social {
+    font-size: var(--h6-fontSize);
+    text-wrap: pretty;
+    text-align: left;
+    margin: 1rem 0;
+    padding: 0;
+    max-width: 600px;
+}
+
+.exhibition-image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    width: 100svw;
+    margin: 0;
+}
+
+.exhibition-image {
+    width: 40%;
+    height: auto;
+    margin: 1rem;
+}
+
+.exhibition-delen-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    width: 100svw;
+    margin: 5rem 0;
+}
+
+.exhibition-information-delen {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 600px;
+    font-size: var(--h6-fontSize);
+    text-wrap: pretty;
+    text-align: left;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.fa {
+    text-decoration: none;
+    margin: 0;
+    padding: 1rem;
+    font-size: var(--p-fontSize);
+    width: 40px;
+    height: auto;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .fa-instagram {
+    background: var(--blueviolet-color-kunstenaar);
+    color: white;
+  }
+
+  .fa-facebook {
+    background: var(--blueviolet-color-kunstenaar);
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: var(--blueviolet-color-kunstenaar);
+    color: white;
+  }
+
+  .fa-rss {
+    background: var(--blueviolet-color-kunstenaar);
+    color: white;
+  }
+
+
+/* footer */
+.footer-container {
+    width: 100svw;
+    border-top: 2px solid var(--blueviolet-color-kunstenaar);
+}
+
+.footer-logo {
+    width: 100svw;
+    padding: 10rem 0 10rem 0;
+}
+
+.footer-grid-container {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100svw;
+    border-top: 2px solid var(--blueviolet-color-kunstenaar);
+}
+
+.footer-item {
+    margin: 0;
+    padding: 2rem;
+    border-right: 2px solid var(--blueviolet-color-kunstenaar);
+}
+
+.footer-item:last-child {
+    margin: 1rem 0 1rem 1rem;
+    padding: 1rem 0;
+    border-right: none;
+}
+
+.footer-text {
+    font-size: var(--h6-fontSize);
+    font-weight: var(--lightWeight);
+    color: #000000;
+}
+
+.footer-text a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    color: var(--blueviolet-color-kunstenaar);
+}

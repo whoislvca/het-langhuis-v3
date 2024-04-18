@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index-planjebezoek.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Het Langhuis Galerie Zwolle</title>
+</head>
+
+<body>
+    <nav class="logo-container">
+        <img class="header-logo" src="./logo/logo-header-planjebezoek.svg" alt="het-langhuis-logo">
+    </nav>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" style="color: #FB5607;" onclick="closeNav()">Close</a>
+        <div class="overlay-content">
+            <a style="background-color: #FF006E;" href="programma.html">Programma</a>
+            <a style="background-color: #FFCC00;" href="archief.html">Archief</a>
+            <a style="background-color: #FB5607;" href="planjebezoek.html">Plan Je Bezoek</a>
+            <a style="background-color: #8338EC;" href="kunstenaars.html">Kunstenaars</a>
+            <a style="background-color: #3A86FF;" href="nieuws.html">Nieuws</a>
+            <a style="background-color: #008040;" href="over.html">Over</a>
+        </div>
+    </div>
+
+    <span class="openbtn" style="color: #FB5607;" onclick="openNav()">Menu</span>
+
+    <main>
+        <div class="border"></div>
+        
+        <section class="information-location-container">
+            <div class="information-location-item">
+                <p class="text-location">
+                    Kunstruimte Het Langhuis<br>
+                    Goudsteeg 8<br>
+                    8011 PP Zwolle
+                </p>
+                <p class="text-location">
+                    Zaterdag 13u tot 17u <br>
+                    Zondag 13u tot 17u
+                </p>
+                <p class="text-location">
+                    De openingstijden gelden alleen tijdens exposities. Er kunnen eventueel extra openingsdagen zijn,
+                    houd hiervoor onze socials in de gaten.
+                </p>
+                <p class="text-location">
+                    De toegang voor Kunstruimte Het Langhuis is gratis. Kunstruimte Het Langhuis wordt volledig gerund
+                    door vrijwilligers. Ondersteun Het Langhuis door een vrijwillige bijdrage achter te laten; steun ons
+                    met een (eenmalige) donatie.
+                </p>
+                <p class="text-location">
+                    De begane grond van Kunstruimte Het Langhuis is goed toegankelijk voor (elektrische) rolstoelen. Het
+                    pand heeft geen lift, daarom is de 1e verdieping helaas niet toegankelijk voor rolstoelen.
+                </p>
+            </div>
+
+            <div class="information-location-item map-background">
+                <iframe class="maps"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.2643293682304!2d6.090396876449802!3d52.51055527205861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7df2f6e08edb9%3A0x419c8b38efcdd45d!2sKunstruimte%20Het%20Langhuis!5e0!3m2!1snl!2snl!4v1709210012477!5m2!1snl!2snl"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer-container">
+        <img class="footer-logo" src="./logo/logo-footer-planjebezoek.svg" alt="het-langhuis-logo">
+        <section class="footer-grid-container">
+            <div class="footer-item">
+                <p class="footer-text">
+                    Het Langhuis
+                </p>
+                <p class="footer-text">
+                    Goudsteeg 8
+                    <br>
+                    8011 PP Zwolle
+                    <br>
+                    Nederland
+                </p>
+            </div>
+            <div class="footer-item">
+                <p class="footer-text">
+                    <a href="steun-ons.html">
+                        Steun Ons
+                    </a>
+                </p>
+                <p class="footer-text">
+                    <a href="huren.html">
+                        Huren
+                    </a>
+                </p>
+                <p class="footer-text">
+                    <a href="vacature.html">
+                        Vacatures
+                    </a>
+                </p>
+            </div>
+            <div class="footer-item">
+                <p class="footer-text">
+                    info(at)langhuis.nl
+                </p>
+                <p class="footer-text">
+                    Facebook
+                </p>
+                <p class="footer-text">
+                    Instagram
+                </p>
+            </div>
+            <div class="footer-item">
+                <p class="footer-text">
+                    Imprint
+                </p>
+                <p class="footer-text">
+                    Privacy
+                </p>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+</body>
+
+</html>
